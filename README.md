@@ -123,6 +123,7 @@ http://www.cs.jhu.edu/~cs226/assignment-stack-queue-v2.html
 
 
 Problem 2: Find the Prime
+
 This assignment will give you practice with queues. You are going to implement a class that computes all the primes up to some integer n. The technique you are to use was developed by a Greek named Eratosthenes who lived in the third century BC. The technique is known as the Sieve of Eratosthenes.
 
 The algorithm is described by the following pseudocode:
@@ -211,3 +212,18 @@ Maximum n to compute (0 to quit)? 0
   
 Note: Original question can be found in the url below. The questions were tailored as how we discussed and implement queue in class.
 http://penguin.ewu.edu/cscd300/Summer_11/Assignments/prog3.html
+  
+
+
+ASSIGNMENT 3 Recursion (hourglass, commas) [Recursion Assignments.pdf](https://github.com/kitkatlky/Data-Structure/files/7598212/Recursion.Assignments.pdf)
+  
+In these assignments, you will write Java programs that each contain a recursive method.
+  
+The first, Hourglass, prints a symmetric graphic using simple text output. The second, Commas, prints a long integer with commas in the correct places. The
+names of the classes containing main should start with upper case letters: Hourglass, and Commas.
+  
+Classes (other than the class containing main), arrays, loops, stacks, queues, and linked lists are inappropriate here and should not be used in the
+recursive methods. The Hourglass program should not contain any loops. None. The Commas program will have an input loop but no other loops. Do not use
+data structures beyond Strings in the Hourglass program. Include comments at the top of your programs and on any method other than main.
+  
+Carefully note the restrictions on language feature use in the specifications for each program.
