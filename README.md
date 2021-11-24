@@ -1,0 +1,2 @@
+# Data-Structure
+A variety of algorithmic techniques will be introduced in this course and students will gain an appreciation of the use and importance of data structures. A range of well-established data structures will be examined, and their properties are described so that it becomes clear which representations are appropriate under which circumstances. In addition to gaining a conceptual understanding of how data can be organized, a much more efficient common data processing tasks such as sorting and searching strategies will also be presented.
