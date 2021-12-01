@@ -1,14 +1,19 @@
 # Data-Structure
 A variety of algorithmic techniques will be introduced in this course and students will gain an appreciation of the use and importance of data structures. A range of well-established data structures will be examined, and their properties are described so that it becomes clear which representations are appropriate under which circumstances. In addition to gaining a conceptual understanding of how data can be organized, a much more efficient common data processing tasks such as sorting and searching strategies will also be presented.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ASSIGNMENT 1 Linked list manipulations
+
 [ASSIGNMENT 1 (Q1-10).pdf](https://github.com/kitkatlky/Data-Structure/files/7598099/ASSIGNMENT.1.Q1-10.pdf)
+
 [assignment 1 complete.pdf](https://github.com/kitkatlky/Data-Structure/files/7598101/assignment.1.complete.pdf)
+
 The first 20 exercises on this page are quite short. They will help you master basic linked list operations. The last 2 programming assignments are more
 challenging. They will help you become comfortable designing and implementing robust algorithms to manipulate linked lists.
 
 Use this declaration of the Node class:
+
 
 final class Node
 {
@@ -34,9 +39,10 @@ For each exercise:
 - Write the Java statements that will transform the inital setup into the "final configuration."
 User the Java Visualizer to execute your solution and visualize the data structures.
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ASSIGNMENT 2 Stack and Queue
+
 [Assignment 2-Stack and Queue Assignment.pdf](https://github.com/kitkatlky/Data-Structure/files/7598123/Assignment.2-Stack.and.Queue.Assignment.pdf)
 
 Problem 1: Calculating Stacks
@@ -44,12 +50,18 @@ Problem 1: Calculating Stacks
 Your first task is to implement a basic RPN calculator that supports integer operands like 1, 64738, and -42 as well as the (binary) integer operators +, -, *, /, and %. The style of arithmetic expressions our calculator will evaluate is also called a post-fix notation. Stacks are great for doing this job!
 
 Your program should work as follows:
+
     • The user enters input consisting of operands and operators, presumably in post-fix notation. We have also included some extra operators to get information about results 
       and the current state of the stack.
+      
     • If the user enters a valid integer, you push that integer onto the stack.
+    
     • If the user enters a valid operator, you pop two integers off the stack, perform the requested operation, and push the result back onto the stack.
+    
     • If the user enters the symbol ? (that’s a question mark), you print the current state of the stack followed by a new line.
+    
     • If the user enters the symbol ^ (that’s a caret), you pop the top element off the stack and print only that element (not the entire stack) followed by a new line.
+    
     • If the user enters the symbol ! (that’s an exclamation mark or bang), you exit the program.
     
 Note that there are several error conditions that your program must deal with gracefully for full credit. We’ll give you two examples for free, you’ll have to figure out any further error conditions for yourself:
@@ -66,54 +78,95 @@ Examples
 Here are two examples for interacting with Calc that will hopefully help you understand what you’re trying to achieve. First a “slow” example:
 
 $ java Calc
+
 ?
+
 []
+
 10
+
 ?
+
 [10]
+
 20 30
+
 ?
+
 [10, 20, 30]
+
 *
+
 ?
+
 [30, 600]
+
 +
+
 ?
+
 [630]
+
 ^
+
 630
+
 ?
+
 []
+
 !
+
 $
 
 Here $ is the shell prompt. After starting the program, the first command was ? to print the stack (which is empty at this point, hence [] is the output). Then the user typed 10 followed by ? and we see that the stack now holds that number: [10]. Now the user typed two numbers 20 30 in sequence before hitting return. When we check the stack now using ? we get the answer [10, 20, 30] so obviously the “top” of the stack is to the right. Then we see the * operator being typed, which will multiply the top two numbers. We use ? again to check the result: [30, 600]. This is followed by the + operator, which will add the top two numbers. Again we check with ? and get [630] as we’d expect. The ^ command prints the same result 630 and pops if off the stack. So the next ? shows an empty stack again. Finally the user typed the ! command to quit, returning us to the shell. Here’s the same example, done “fast” this time:
 
 $ java Calc
+
 ? 10 ? 20 30 ? * ? + ? ^ ? !
+
 []
+
 [10]
+
 [10, 20, 30]
+
 [30, 600]
+
 [630]
+
 630
+
 []
+
 $
 
 As you can see, if the entire sequence of integers, operators, and commands is entered on a single line, they are all executed in order. It’s like having our own little programming language! Finally, here’s an example for the sample error conditions described above:
 
 $ java Calc
+
 1 2 blah 1.0 3 ?
+
 #Invalid input.
+
 #Invalid input.
+
 [1, 2, 3]
+
 + + ?
+
 [6]
+
 + + ?
+
 #Not enough arguments.
+
 #Not enough arguments.
+
 [6]
+
 !
+
 $
 
 Note that blah and 1.0 lead to error messages but are otherwise ignored (the program doesn’t stop); same for the two + operations when the stack only has a single element (the program doesn’t even modify the stack in that case).
@@ -213,9 +266,10 @@ Maximum n to compute (0 to quit)? 0
 Note: Original question can be found in the url below. The questions were tailored as how we discussed and implement queue in class.
 http://penguin.ewu.edu/cscd300/Summer_11/Assignments/prog3.html
   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-ASSIGNMENT 3 Recursion (hourglass, commas) [Recursion Assignments.pdf](https://github.com/kitkatlky/Data-Structure/files/7598212/Recursion.Assignments.pdf)
+ASSIGNMENT 3 Recursion (hourglass, commas) 
+  [Recursion Assignments.pdf](https://github.com/kitkatlky/Data-Structure/files/7598212/Recursion.Assignments.pdf)
   
 In these assignments, you will write Java programs that each contain a recursive method.
   
